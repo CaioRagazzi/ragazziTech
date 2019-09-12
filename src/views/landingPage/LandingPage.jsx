@@ -36,56 +36,30 @@ import {
 // core components
 import RGNavbar from "components/Navbars/NavBarRG.jsx";
 import Footer from "components/Footer/Footer.jsx";
+import PageHeader from "components/PageHeader/PageHeader.jsx";
 
 import bigChartData from "variables/charts.jsx";
 
 class LandingPage extends React.Component {
+  // componentDidMount() {
+  //   document.body.classList.toggle("landing-page");
+  // }
+  // componentWillUnmount() {
+  //   document.body.classList.toggle("landing-page");
+  // }
   componentDidMount() {
-    document.body.classList.toggle("landing-page");
+    document.body.classList.toggle("index-page");
   }
   componentWillUnmount() {
-    document.body.classList.toggle("landing-page");
+    document.body.classList.toggle("index-page");
   }
   render() {
     return (
       <>
         <RGNavbar />
-        <div className="wrapper">
-          <div className="page-header">
-            <img
-              alt="..."
-              className="path"
-              src={require("assets/img/blob.png")}
-            />
-            <img
-              alt="..."
-              className="path2"
-              src={require("assets/img/path2.png")}
-            />
-            <img
-              alt="..."
-              className="shapes triangle"
-              src={require("assets/img/triunghiuri.png")}
-            />
-            <img
-              alt="..."
-              className="shapes wave"
-              src={require("assets/img/waves.png")}
-            />
-            <img
-              alt="..."
-              className="shapes squares"
-              src={require("assets/img/patrat.png")}
-            />
-            <img
-              alt="..."
-              className="shapes circle"
-              src={require("assets/img/cercuri.png")}
-            />
-          </div>
-          {/* INCLUIR SECTIONS!!!!!!!!!!!!!! */}          
-          <Footer />
-        </div>
+        <PageHeader />
+        {/* INCLUIR SECTIONS!!!!!!!!!!!!!! */}
+        <Footer />
       </>
     );
   }
